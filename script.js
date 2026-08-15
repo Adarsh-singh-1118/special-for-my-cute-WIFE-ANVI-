@@ -139,10 +139,10 @@ function updateCountdown() {
     Yahan birthday date set kar sakte ho.
 
     Example:
-    August 20, 2026
+    August 18, 2009
   */
 
-  const birthday = new Date("August 20, 2026 00:00:00");
+  const birthday = new Date("August 18, 2009 00:00:00");
 
   const now = new Date();
 
