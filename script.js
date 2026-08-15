@@ -142,7 +142,7 @@ function updateCountdown() {
     August 18, 2009
   */
 
-  const birthday = new Date("August 18, 2009 00:00:00");
+  const birthday = new Date("August 18, 2009 00:00:10");
 
   const now = new Date();
 
