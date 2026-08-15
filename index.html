@@ -263,7 +263,26 @@ font-size:28px;
 
 </section>
 <script>
+<button id="surpriseBtn" onclick="openFinalSurprise()">
+  🎁 Final Surprise
+</button>
 
+<div id="finalSurprise" class="surprise-box">
+  <div class="surprise-content">
+    <div class="heart">❤️</div>
+    <h1>My Final Surprise 💖</h1>
+    <p>
+      Tum meri zindagi ka sabse khoobsurat hissa ho. ❤️
+      <br>
+      Happy Birthday, My Love! 🥰
+    </p>
+    <p class="love-text">
+      I Love You Forever & Always 💍❤️
+    </p>
+
+    <button onclick="closeFinalSurprise()">Close ❤️</button>
+  </div>
+</div>
 for(let i=0;i<100;i++){
 
 let item=document.createElement("div");
