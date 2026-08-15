@@ -1,1 +1,498 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #09030a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.8)),
+    url("photo1.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center,
+    rgba(255,70,130,.25),
+    transparent 55%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  animation: fadeUp 1.5s ease;
+}
+
+.small-title {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 25px;
+  opacity: .85;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 9vw, 105px);
+  line-height: 1;
+  margin-bottom: 25px;
+  text-shadow: 0 0 30px rgba(255,70,130,.5);
+}
+
+.hero h1 span {
+  display: block;
+  color: #ff719d;
+}
+
+.hero-text {
+  font-size: 20px;
+  line-height: 1.8;
+  opacity: .9;
+  margin-bottom: 35px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.main-btn,
+.surprise-btn {
+  border: none;
+  cursor: pointer;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff3f78, #b52cff);
+  box-shadow: 0 10px 35px rgba(255,50,120,.35);
+  transition: .3s ease;
+}
+
+.main-btn:hover,
+.surprise-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 15px 45px rgba(255,50,120,.55);
+}
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+section {
+  position: relative;
+  padding: 110px 25px;
+  text-align: center;
+}
+
+.section-label {
+  color: #ff719d;
+  letter-spacing: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-size: clamp(32px, 5vw, 58px);
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+section h2 span {
+  color: #ff719d;
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+  background:
+    radial-gradient(circle at 50% 30%,
+    rgba(255,50,120,.12),
+    transparent 45%);
+}
+
+.story-text {
+  max-width: 750px;
+  margin: auto;
+  font-size: 19px;
+  line-height: 1.9;
+  color: #ddd;
+}
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memories {
+  background: #0d050d;
+}
+
+.photo-grid {
+  max-width: 1100px;
+  margin: 50px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.photo-card {
+  height: 430px;
+  overflow: hidden;
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 20px 50px rgba(0,0,0,.5);
+  transition: .5s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-8px) scale(1.01);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: .6s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.love-letter {
+  background:
+    linear-gradient(rgba(15,3,12,.94), rgba(15,3,12,.94)),
+    url("photo2.jpg") center/cover fixed;
+}
+
+.letter-box {
+  max-width: 750px;
+  margin: 40px auto 0;
+  padding: 50px 35px;
+  border-radius: 25px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.15);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 25px 70px rgba(0,0,0,.5);
+}
+
+.letter-box h2 {
+  font-size: 38px;
+}
+
+.letter-box p {
+  color: #ddd;
+  font-size: 18px;
+  line-height: 1.9;
+  margin: 18px 0;
+}
+
+.signature {
+  color: #ff719d !important;
+  font-weight: bold;
+  font-size: 24px !important;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section {
+  background:
+    radial-gradient(circle at center,
+    rgba(180,40,150,.15),
+    transparent 55%);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+
+.countdown div {
+  width: 120px;
+  padding: 22px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
+}
+
+.countdown span {
+  display: block;
+  font-size: 42px;
+  font-weight: bold;
+  color: #ff719d;
+}
+
+.countdown small {
+  display: block;
+  margin-top: 8px;
+  color: #ccc;
+}
+
+/* =========================
+   FINAL SURPRISE SECTION
+========================= */
+
+.final-section {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at center,
+    rgba(255,50,120,.18),
+    transparent 55%);
+}
+
+.final-section > p:not(.section-label) {
+  max-width: 600px;
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.surprise-btn {
+  font-size: 18px;
+  padding: 18px 38px;
+  animation: pulseButton 2s infinite;
+}
+
+/* =========================
+   SURPRISE POPUP
+========================= */
+
+.surprise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0,0,0,.88);
+  backdrop-filter: blur(10px);
+}
+
+.surprise-overlay.active {
+  display: flex;
+  animation: fadeIn .5s ease;
+}
+
+.surprise-card {
+  position: relative;
+  width: min(90%, 650px);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 55px 30px;
+  text-align: center;
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg,
+    rgba(255,70,130,.25),
+    rgba(100,20,130,.3)),
+    #160813;
+  border: 1px solid rgba(255,255,255,.2);
+  box-shadow:
+    0 0 80px rgba(255,50,130,.3),
+    0 30px 100px rgba(0,0,0,.7);
+  animation: surprisePop .7s cubic-bezier(.2,.8,.2,1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  background: rgba(255,255,255,.1);
+}
+
+.big-heart {
+  font-size: 85px;
+  animation: heartbeat 1.2s infinite;
+}
+
+.surprise-card h1 {
+  font-size: clamp(35px, 7vw, 65px);
+  line-height: 1.1;
+  margin: 20px 0;
+  color: #ff719d;
+}
+
+.surprise-card p {
+  max-width: 520px;
+  margin: 15px auto;
+  color: #eee;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.surprise-card h2 {
+  margin-top: 30px;
+  color: #fff;
+  font-size: 25px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes surprisePop {
+  from {
+    opacity: 0;
+    transform: scale(.5) translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+@keyframes pulseButton {
+  0%, 100% {
+    box-shadow: 0 10px 35px rgba(255,50,120,.35);
+  }
+
+  50% {
+    box-shadow:
+      0 10px 50px rgba(255,50,120,.7);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  section {
+    padding: 80px 18px;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero-text {
+    font-size: 17px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card {
+    height: 420px;
+  }
+
+  .countdown {
+    gap: 10px;
+  }
+
+  .countdown div {
+    width: 75px;
+    padding: 15px 5px;
+  }
+
+  .countdown span {
+    font-size: 28px;
+  }
+
+  .countdown small {
+    font-size: 11px;
+  }
+
+  .letter-box {
+    padding: 35px 20px;
+  }
+
+  .surprise-card {
+    padding: 45px 20px;
+  }
+
+  .big-heart {
+    font-size: 65px;
+  }
+
+}
