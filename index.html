@@ -1,1 +1,57 @@
 
+<!-- Ye code pichhle code ke niche add karna -->
+
+<div class="card">
+
+<h2>⏳ Countdown To Your Special Day ⏳</h2>
+
+<p id="countdown"></p>
+
+</div>
+
+<div class="card">
+
+<h2>🎵 Romantic Music 🎵</h2>
+
+<audio id="music" controls>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<div class="card">
+
+<h2>🎆 Fireworks Of Love 🎆</h2>
+
+<p>
+
+✨ Happy Birthday My Queen ✨
+
+🌹 May your smile always shine.
+
+💖 May our love stay forever.
+
+💍 I LOVE YOU FOREVER.
+
+</p>
+
+</div>
+
+<script>
+
+let birthday=new Date("August 18, 2009 00:00:00").getTime();
+
+let timer=setInterval(function(){
+
+let now=new Date().getTime();
+
+let distance=birthday-now;
+
+let days=Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("countdown").innerHTML=
+days+" days remaining ❤️";
+
+},1000);
+
+</script>
