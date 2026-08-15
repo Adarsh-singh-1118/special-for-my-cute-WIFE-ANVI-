@@ -163,7 +163,54 @@ Happy Birthday, My Queen. 👑 my sweet wife happy birthday
 
 I Love You Forever. ❤️
 
+<section style="padding:60px 20px;text-align:center;">
 
+<h2>🎆 Countdown To Your Special Day 🎆</h2>
+
+<div id="countdown"
+style="font-size:32px;margin:20px 0;">
+Loading...
+</div>
+
+<h2>💖 Forever & Always 💖</h2>
+
+<p style="font-size:22px;line-height:2;max-width:700px;margin:auto;">
+
+🌹 You are my happiness.
+
+❤️ You are my favorite person.
+
+💍 You are my forever.
+
+✨ Happy Birthday, My Queen.
+
+</p>
+
+<button onclick="fireworks()"
+style="
+padding:15px 35px;
+font-size:20px;
+border-radius:40px;
+cursor:pointer;
+margin-top:30px;
+">
+
+🎆 Final Surprise 🎆
+
+</button>
+
+<div id="fireworks"
+style="
+display:none;
+font-size:40px;
+margin-top:30px;
+">
+
+🎆❤️🌹💖🎇🎉❤️🌹💖🎆
+
+</div>
+
+</section>
 
 <button onclick="showMessage()">
 🎁 Open Surprise 🎁
@@ -218,6 +265,25 @@ function showMessage() {
 document.getElementById("surprise").style.display = "block";
 
 }
+const birthday = new Date("2027-08-15").getTime();
+
+setInterval(function () {
+
+const now = new Date().getTime();
+
+const distance = birthday - now;
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+document.getElementById("countdown").innerHTML =
+days + " Days Left ❤️";
+
+}, 1000);
+
+function fireworks() {
+
+document.getElementById("fireworks").style.display = "block";
+
 }
 
 </script>
