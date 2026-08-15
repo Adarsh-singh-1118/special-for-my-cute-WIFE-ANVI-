@@ -147,7 +147,23 @@ My Everything 💖
 
 <h2>💌 A Letter For You 💌</h2>
 
-<p id="letter"></p>
+<p style="max-width:700px;margin:auto;font-size:22px;line-height:2;padding:20px;">
+
+My Dear Anvi ❤️
+
+You are the most beautiful part of my life. 🌹
+
+Every moment with you is special.
+
+Your smile makes my world brighter. ✨
+
+No matter what happens, I will always care for you. 💖
+
+Happy Birthday, My Queen. 👑
+
+I Love You Forever. ❤️
+
+</p>
 
 <button onclick="showMessage()">
 🎁 Open Surprise 🎁
@@ -206,23 +222,6 @@ document.body.appendChild(item);
 const text =
 "My dear Anvi ❤️ Thank you for bringing happiness into my life. Every moment with you is special. I promise to love you forever. 🌹";
 
-let i = 0;
-
-function typing() {
-
-if (i < text.length) {
-
-document.getElementById("letter").innerHTML += text.charAt(i);
-
-i++;
-
-setTimeout(typing, 70);
-
-}
-
-}
-
-typing();
 
 function showMessage() {
 
