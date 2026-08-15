@@ -262,3 +262,83 @@ animationStyle.innerHTML = `
 `;
 
 document.head.appendChild(animationStyle);
+/* =========================
+   ROSE + HEART ANIMATION
+========================= */
+
+function createRoseAndHearts() {
+
+  for (let i = 0; i < 25; i++) {
+
+    const item = document.createElement("div");
+
+    item.innerHTML = Math.random() > 0.5 ? "🌹" : "❤️";
+
+    item.style.position = "fixed";
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.bottom = "-50px";
+    item.style.fontSize =
+      (18 + Math.random() * 25) + "px";
+
+    item.style.zIndex = "9997";
+    item.style.pointerEvents = "none";
+
+    item.style.animation =
+      "roseHeartFloat " +
+      (4 + Math.random() * 3) +
+      "s linear forwards";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => {
+      item.remove();
+    }, 7000);
+  }
+}
+
+
+/* Automatically start animation */
+
+setInterval(createRoseAndHearts, 3500);
+
+
+/* Animation */
+
+const roseHeartStyle = document.createElement("style");
+
+roseHeartStyle.innerHTML = `
+
+@keyframes roseHeartFloat {
+
+  0% {
+    opacity: 0;
+    transform:
+      translateY(0)
+      rotate(0deg)
+      scale(.6);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    transform:
+      translateY(-50vh)
+      rotate(15deg)
+      scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateY(-110vh)
+      rotate(-20deg)
+      scale(1.2);
+  }
+
+}
+
+`;
+
+document.head.appendChild(roseHeartStyle);
