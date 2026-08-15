@@ -1,57 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Ye code pichhle code ke niche add karna -->
+<title>Happy Birthday My Beautiful Wife ❤️</title>
 
-<div class="card">
+<style>
 
-<h2>⏳ Countdown To Your Special Day ⏳</h2>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<p id="countdown"></p>
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#120208,#4a0d26,#120208);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
 
-</div>
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
 
-<div class="card">
+h1{
+font-size:60px;
+animation:glow 2s infinite alternate;
+}
 
-<h2>🎵 Romantic Music 🎵</h2>
+@keyframes glow{
 
-<audio id="music" controls>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
+from{
+text-shadow:0 0 10px pink;
+}
 
-</div>
+to{
+text-shadow:0 0 40px pink;
+}
 
-<div class="card">
+}
 
-<h2>🎆 Fireworks Of Love 🎆</h2>
+h2{
+margin-top:20px;
+font-size:30px;
+}
+
+p{
+margin-top:20px;
+font-size:20px;
+line-height:1.8;
+}
+
+.button{
+
+margin-top:30px;
+padding:15px 35px;
+border-radius:40px;
+background:white;
+color:black;
+text-decoration:none;
+font-size:18px;
+
+}
+
+.photo{
+
+width:90%;
+max-width:500px;
+border-radius:25px;
+margin:40px auto;
+display:block;
+
+}
+
+.falling{
+
+position:fixed;
+top:-50px;
+font-size:30px;
+animation:fall linear infinite;
+
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1>🎂 Happy Birthday 🎂</h1>
+
+<h2>Anvi Arya (Ladooo) ❤️</h2>
 
 <p>
 
-✨ Happy Birthday My Queen ✨
+My Queen 👑
 
-🌹 May your smile always shine.
+<br>
 
-💖 May our love stay forever.
+My Love ❤️
 
-💍 I LOVE YOU FOREVER.
+<br>
+
+My Everything 💖
 
 </p>
+
+<a href="#gallery" class="button">
+
+🌹 Open Our Love Story 🌹
+
+</a>
+
+</div>
+
+<div id="gallery">
+
+<img src="queenanvi.jpg" class="photo">
+
+<img src="beautifulsmile.jpg" class="photo">
+
+<img src="loveforever.jpg" class="photo">
 
 </div>
 
 <script>
 
-let birthday=new Date("August 18, 2009 00:00:00").getTime();
+for(let i=0;i<100;i++){
 
-let timer=setInterval(function(){
+let item=document.createElement("div");
 
-let now=new Date().getTime();
+item.className="falling";
 
-let distance=birthday-now;
+item.innerHTML=["❤️","🌹","💕","💖"][Math.floor(Math.random()*4)];
 
-let days=Math.floor(distance/(1000*60*60*24));
+item.style.left=Math.random()*100+"vw";
 
-document.getElementById("countdown").innerHTML=
-days+" days remaining ❤️";
+item.style.animationDuration=(Math.random()*6+4)+"s";
 
-},1000);
+document.body.appendChild(item);
+
+}
 
 </script>
+
+</body>
+
+</html>
