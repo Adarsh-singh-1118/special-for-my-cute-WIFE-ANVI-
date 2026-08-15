@@ -29,7 +29,7 @@ body {
   padding: 30px;
   background:
     linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.8)),
-    url("photo1.jpg") center/cover no-repeat;
+    url("beautifulsmile.jpg")center/cover no-repeat;
 }
 
 .hero-overlay {
@@ -194,7 +194,7 @@ section h2 span {
 .love-letter {
   background:
     linear-gradient(rgba(15,3,12,.94), rgba(15,3,12,.94)),
-    url("photo2.jpg") center/cover fixed;
+    url("loveforever.jpg")center/cover fixed;
 }
 
 .letter-box {
