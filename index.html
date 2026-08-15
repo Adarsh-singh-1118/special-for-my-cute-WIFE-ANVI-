@@ -1,332 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Birthday My Beautiful Wife ❤️</title>
+  <title>Happy Birthday My Love ❤️</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#120208,#4a0d26,#120208);
-color:white;
-text-align:center;
-overflow-x:hidden;
-}
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:20px;
-}
-
-h1{
-font-size:60px;
-animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
-
-from{
-text-shadow:0 0 10px pink;
-}
-
-to{
-text-shadow:0 0 40px pink;
-}
-
-}
-
-h2{
-margin-top:20px;
-font-size:30px;
-}
-
-p{
-margin-top:20px;
-font-size:20px;
-line-height:1.8;
-}
-
-.button{
-
-margin-top:30px;
-padding:15px 35px;
-border-radius:40px;
-background:white;
-color:black;
-text-decoration:none;
-font-size:18px;
-
-}
-
-.photo{
-
-width:90%;
-max-width:500px;
-border-radius:25px;
-margin:40px auto;
-display:block;
-
-}
-
-.falling{
-
-position:fixed;
-top:-50px;
-font-size:30px;
-animation:fall linear infinite;
-
-}
-
-@keyframes fall{
-
-0%{
-transform:translateY(-100px) rotate(0deg);
-}
-
-100%{
-transform:translateY(120vh) rotate(360deg);
-}
-
-}
-
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="hero">
+  <!-- =========================
+       MUSIC
+  ========================== -->
 
-<h1>🎂 Happy Birthday 🎂</h1>
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
 
-<h2>Anvi Arya (Ladooo) ❤️</h2>
 
-<p>
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
 
-My Queen 👑
+  <section class="hero">
 
-<br>
+    <div class="hero-overlay"></div>
 
-My Love ❤️
+    <div class="hero-content">
 
-<br>
+      <p class="small-title">
+        To The Most Beautiful Person In My Life
+      </p>
 
-My Everything 💖
+      <h1>
+        Happy Birthday
+        <span>My Love ❤️</span>
+      </h1>
 
-</p>
+      <p class="hero-text">
+        Today isn't just your birthday...
+        <br>
+        It's the day my favourite person was born. 🥹❤️
+      </p>
 
-<a href="#gallery" class="button">
+      <button class="main-btn" onclick="startExperience()">
+        ✨ Start Your Surprise ✨
+      </button>
 
-🌹 Open Our Love Story 🌹
+    </div>
 
-</a>
+  </section>
 
-</div>
 
-<div id="gallery">
+  <!-- =========================
+       OUR STORY
+  ========================== -->
 
-<img src="queenanvi.jpg" class="photo">
+  <section class="story">
 
-<img src="beautifulsmile.jpg" class="photo">
+    <p class="section-label">OUR STORY</p>
 
-<img src="loveforever.jpg" class="photo">
-<section>
-<section>
-
-<button onclick="showMessage()">
-
-🎁 Open Surprise 🎁
-
-</button>
-
-<div id="surprise" style="display:none;margin-top:20px;font-size:30px;">
-
-💍 I LOVE YOU FOREVER ❤️
-
-🌹 Happy Birthday My Beautiful Wife 🌹
-
-</div>
-
-</section>
-<h2>💌 A Letter For You 💌</h2>
-
-<p style="max-width:700px;margin:auto;font-size:22px;line-height:2;padding:20px;">
-
-My Dear Anvi ❤️
-
-You are the most beautiful part of my life. 🌹
-
-Every moment with you is special.
-
-Your smile makes my world brighter. ✨
-
-No matter what happens, I will always care for you. 💖
-
-Happy Birthday, My Queen. 👑 my sweet wife happy birthday 
-
-I Love You Forever. ❤️
-
-<section style="padding:60px 20px;text-align:center;">
-
-<h2>🎆 Countdown To Your Special Day 🎆</h2>
-
-<div id="countdown"
-style="font-size:32px;margin:20px 0;">
-Loading...
-</div>
-
-<h2>💖 Forever & Always 💖</h2>
-
-<p style="font-size:22px;line-height:2;max-width:700px;margin:auto;">
-
-🌹 You are my happiness.
-
-❤️ You are my favorite person.
-
-💍 You are my forever.
-
-✨ Happy Birthday, My Queen.
-
-</p>
-
-<button onclick="fireworks()"
-style="
-padding:15px 35px;
-font-size:20px;
-border-radius:40px;
-cursor:pointer;
-margin-top:30px;
-">
-
-🎆 Final Surprise 🎆
-
-</button>
-
-<div id="fireworks"
-style="
-display:none;
-font-size:40px;
-margin-top:30px;
-">
-
-🎆❤️🌹💖🎇🎉❤️🌹💖🎆
-
-</div>
-function showMessage(){
-
-document.getElementById("surprise").style.display="block";
-
-}
-</section>
-
-<button onclick="showMessage()">
-🎁 Open Surprise 🎁
-</button>
-
-<div id="surprise" style="display:none;margin-top:20px;">
-💍 I Love You Forever ❤️
-</div>
-
-<button onclick="showMessage()"
-style="
-padding:15px 30px;
-margin-top:30px;
-border:none;
-border-radius:40px;
-font-size:18px;
-cursor:pointer;
-">
-🎁 Open Surprise 🎁
-</button>
-
-<div id="surprise"
-style="
-display:none;
-margin-top:30px;
-font-size:28px;
-">
-💍 I Love You Forever ❤️
-</div>
-
-</section>
-<script>
-<button id="surpriseBtn" onclick="openFinalSurprise()">
-  🎁 Final Surprise
-</button>
-
-<div id="finalSurprise" class="surprise-box">
-  <div class="surprise-content">
-    <div class="heart">❤️</div>
-    <h1>My Final Surprise 💖</h1>
-    <p>
-      Tum meri zindagi ka sabse khoobsurat hissa ho. ❤️
+    <h2>
+      Every Love Story Is Beautiful...
       <br>
-      Happy Birthday, My Love! 🥰
-    </p>
-    <p class="love-text">
-      I Love You Forever & Always 💍❤️
+      <span>But Ours Is My Favourite ❤️</span>
+    </h2>
+
+    <p class="story-text">
+      From the moment you came into my life,
+      everything became a little more beautiful.
+      Your smile, your voice, your presence...
+      everything means more to me than words can explain.
     </p>
 
-    <button onclick="closeFinalSurprise()">Close ❤️</button>
+  </section>
+
+
+  <!-- =========================
+       PHOTO SECTION
+  ========================== -->
+
+  <section class="memories">
+
+    <p class="section-label">OUR MEMORIES</p>
+
+    <h2>Beautiful Moments With You 📸</h2>
+
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img src="photo1.jpg" alt="Our Memory 1">
+      </div>
+
+      <div class="photo-card">
+        <img src="photo2.jpg" alt="Our Memory 2">
+      </div>
+
+      <div class="photo-card">
+        <img src="photo3.jpg" alt="Our Memory 3">
+      </div>
+
+      <div class="photo-card">
+        <img src="photo4.jpg" alt="Our Memory 4">
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       LOVE LETTER
+  ========================== -->
+
+  <section class="love-letter">
+
+    <p class="section-label">A LETTER FOR YOU</p>
+
+    <div class="letter-box">
+
+      <h2>My Dear Love ❤️</h2>
+
+      <p>
+        I don't know if words will ever be enough
+        to explain what you mean to me.
+      </p>
+
+      <p>
+        You are not just someone I love.
+        You are someone who makes my life feel
+        complete.
+      </p>
+
+      <p>
+        On your special day, I just want you to know
+        that I will always cherish you,
+        support you and love you.
+      </p>
+
+      <p class="signature">
+        Forever Yours ❤️
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       COUNTDOWN
+  ========================== -->
+
+  <section class="countdown-section">
+
+    <p class="section-label">THE SPECIAL MOMENT</p>
+
+    <h2>
+      Something Special Is Waiting For You 🎁
+    </h2>
+
+    <div id="countdown" class="countdown">
+
+      <div>
+        <span id="days">00</span>
+        <small>Days</small>
+      </div>
+
+      <div>
+        <span id="hours">00</span>
+        <small>Hours</small>
+      </div>
+
+      <div>
+        <span id="minutes">00</span>
+        <small>Minutes</small>
+      </div>
+
+      <div>
+        <span id="seconds">00</span>
+        <small>Seconds</small>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FINAL SURPRISE
+  ========================== -->
+
+  <section class="final-section">
+
+    <p class="section-label">ONE LAST THING...</p>
+
+    <h2>
+      Are You Ready For Your
+      <span>Final Surprise? ❤️</span>
+    </h2>
+
+    <p>
+      Don't close this page yet...
+      I saved something very special for you.
+    </p>
+
+    <button
+      id="surpriseBtn"
+      class="surprise-btn"
+      onclick="openFinalSurprise()"
+    >
+      🎁 OPEN FINAL SURPRISE 🎁
+    </button>
+
+  </section>
+
+
+  <!-- =========================
+       FINAL SURPRISE POPUP
+  ========================== -->
+
+  <div id="finalSurprise" class="surprise-overlay">
+
+    <div class="surprise-card">
+
+      <button
+        class="close-btn"
+        onclick="closeFinalSurprise()"
+      >
+        ×
+      </button>
+
+      <div class="big-heart">
+        ❤️
+      </div>
+
+      <h1>
+        Happy Birthday
+        <br>
+        My Love! 🥹❤️
+      </h1>
+
+      <p>
+        You are the most beautiful chapter
+        of my life.
+      </p>
+
+      <p>
+        I promise to keep loving you,
+        making you smile,
+        and standing beside you
+        through everything. ❤️
+      </p>
+
+      <h2>
+        I LOVE YOU FOREVER ♾️❤️
+      </h2>
+
+      <div id="fireworks"></div>
+
+    </div>
+
   </div>
-</div>
-for(let i=0;i<100;i++){
 
-let item=document.createElement("div");
 
-item.className="falling";
+  <!-- =========================
+       FLOATING HEARTS
+  ========================== -->
 
-item.innerHTML=["❤️","🌹","💕","💖"][Math.floor(Math.random()*4)];
+  <div id="hearts"></div>
 
-item.style.left=Math.random()*100+"vw";
 
-item.style.animationDuration=(Math.random()*6+4)+"s";
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
 
-document.body.appendChild(item);
-const text =
-"My dear Anvi ❤️ Thank you for bringing happiness into my life. Every moment with you is special. I promise to love you forever. 🌹";
-
-function showMessage() {
-
-document.getElementById("surprise").style.display = "block";
-
-}
-const birthday = new Date("2027-08-15").getTime();
-
-setInterval(function () {
-
-const now = new Date().getTime();
-
-const distance = birthday - now;
-
-const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-document.getElementById("countdown").innerHTML =
-days + " Days Left ❤️";
-
-}, 1000);
-
-function fireworks() {
-
-document.getElementById("fireworks").style.display = "block";
-
-}
-
-</script>
+  <script src="script.js"></script>
 
 </body>
-
 </html>
